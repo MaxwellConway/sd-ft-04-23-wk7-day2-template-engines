@@ -7,13 +7,24 @@
 
   <body>
     <%- include ("../partials/nav.ejs") %>
-    <h1>This is the display all users page</h1>
-    <% userData.forEach((user)=>{ %>
-    <div>
-      <h3><%= user.name %></h3>
-      <h4><%= user.email %></h4>
-      <h5><%= user.city %> <%= user.zipcode %></h5>
+
+    <div class="cardContainer">
+      <% userData.forEach((user)=>{ %>
+      <div class="card">
+        <h2><%= user.name %></h2>
+        <h4><%= user.email %></h4>
+        <h4><%= user.company.name %></h4>
+        <h5><%= user.company.address %>, <%= user.company.city %></h5>
+
+        <h4 class="skillsContainer"><%= user.skills %></h4>
+        <div class="projectContainer">
+          <% user.projects.forEach((projects)=>{ %>
+          <h4><%= projects.name %>:</h4>
+          <h4><%= projects.description %></h4>
+          <% }) %>
+        </div>
+      </div>
+      <% }) %>
     </div>
-    <% }) %>
   </body>
 </html>

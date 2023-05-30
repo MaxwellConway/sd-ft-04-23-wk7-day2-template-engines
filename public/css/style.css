@@ -1,3 +1,41 @@
 h1 {
-  color: red;
+  color: blue;
+}
+
+body {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(227, 227, 227),
+    rgb(86, 56, 56)
+  );
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+.card {
+  text-align: center;
+  width: 300px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  border-radius: 5%;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(227, 227, 227),
+    rgb(221, 189, 189)
+  );
+  filter: drop-shadow(0 30px 10px rgba(0, 0, 0, 0.125));
+}
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+.projectContainer {
+  padding-left: 10px;
+  text-align: left;
+}
+
+.skillsContainer {
+  padding-left: 10px;
 }
